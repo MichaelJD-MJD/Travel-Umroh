@@ -1,78 +1,86 @@
-# sadmin
-Sample Admin Template using Laravel, Breeze, Spatie, Tailwind Css (Dashboard Template) Intended to eliminate repititive tasks of creating admin with user, role & permission and some basic configurations to enable fast development of Laravel web apps.
+# 🕋 Umrah Travel Website – KBIH AS-SYAMIAH
 
-### Steps to Run After Cloning
+This website is built using the following technologies:
+- **Laravel** as the backend framework
+- **MySQL** as the database
+- **Tailwind CSS** for styling
+- **Laravel Breeze** as the starter kit for authentication
+- **Cloudinary** for image storage and management
 
-1. **Duplicate the `.env.example` File**  
-   In the project root directory, create a copy of the `.env.example` file and rename it to `.env`.
+---
 
-2. **Configure Database Settings**  
-   Open the newly created `.env` file and update the database configuration with your preferred settings. For example:
+## 🚀 How to Run This Project
+
+1. **Clone or Download the Repository**  
+   Open your terminal and run:
    ```bash
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=sadmin
-   DB_USERNAME=root
-   DB_PASSWORD=
+   git clone https://github.com/MichaelJD-MJD/Travel-Umroh.git
+   cd Travel-Umroh
    ```
 
-3. **Install Composer Dependencies**  
-   Run the following command to install PHP dependencies:
+2. **Create .env File and Configure Cloudinary**  
+   Copy .env.example to .env, then add the following Cloudinary configuration:
+   ```env
+   CLOUDINARY_URL=
+   CLOUDINARY_CLOUD_NAME=
+   CLOUDINARY_API_KEY=
+   CLOUDINARY_API_SECRET=
+   ```
+   > 📌 Note: Please create an account at https://cloudinary.com to obtain your API key and secret.
+
+3. **Install PHP Dependencies**  
+   Run the following command:
    ```bash
    composer install
    ```
 
 4. **Generate Application Key**  
-   Generate a new application key using the command:
+   Run the command below to generate your Laravel app key:
    ```bash
    php artisan key:generate
    ```
 
 5. **Run Migrations and Seed the Database**  
-   Set up the database by running migrations and seeding:
+   Set up the database by running:
    ```bash
    php artisan migrate
    php artisan migrate:fresh --seed
    ```
 
 6. **Install Node.js Dependencies**  
-   Install JavaScript dependencies with:
+   Install JavaScript dependencies:
    ```bash
    npm install
    ```
 
-7. **Build Assets**  
-   Compile and optimize assets using:
+7. **Build Frontend Assets**  
+   Compile the frontend assets:
    ```bash
    npm run build
    ```
 
 8. **Start the Development Server**  
-   Launch the development server with:
+   Launch the Laravel development server:
    ```bash
    php artisan serve
    ```
+   > ⚠️ Make sure XAMPP is running and MySQL is active.
 
-9. **Use Credintials to test**  
-   Use this default username and password respectively to login 
+9. **Login Credentials for Testing**  
+   Use the following accounts to log in:
+
+   **Admin Account:**
    ```
-   admin@example.com
-   password
+   Email: admin@assyamiah.com
+   Password: admin123
    ```
-   (optional) you can use /admin to explore the integrated prebuilt Tailwind Dashboard and its components
 
+   **Regular User Account:**
+   ```
+   Email: ahmad@example.com
+   Password: password123
+   ```
 
-## Watch the Setup Video
+---
 
-Check out the setup video for the **"sadmin"** template here:
-
-[![Watch the video](https://img.youtube.com/vi/tged_ZWdS44/hqdefault.jpg)](https://youtu.be/tged_ZWdS44?si=vkpU-XDNEz_rH4b-)
-
-## Useful Links
-
-- **Laravel and Breeze**: [Laravel Starter Kits - Breeze and Blade](https://laravel.com/docs/11.x/starter-kits#breeze-and-blade)
-- **Spatie**: [Spatie Laravel Permission Installation](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
-- **Tailwind CSS**: [Tailwind CSS Laravel Installation](https://tailwindcss.com/docs/guides/laravel)
-- **Tailwind Dashboard Template**: [Tailwind Dashboard Template Source](https://www.tailwindawesome.com/resources/dashboard-template)
-# Travel-Umroh
+Feel free to open issues or contribute to the project!
