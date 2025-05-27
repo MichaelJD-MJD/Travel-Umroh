@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             PaketSeeder::class,
+            GaleriSeeder::class,
         ]);
     }
 

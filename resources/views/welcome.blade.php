@@ -16,7 +16,8 @@
     <div class="relative w-full h-screen">
         <img src="{{ asset('images/banner.png') }}" alt="Banner" class="w-full h-full object-cover brightness-50">
 
-        <div data-aos="zoom-in" data-aos-duration="1500" class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+        <div data-aos="zoom-in" data-aos-duration="1500"
+            class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
                 Haji dan Umroh Nyaman,<br>
                 Aman, Sesuai Sunnah.
@@ -42,11 +43,11 @@
         <div class="flex flex-wrap justify-center gap-6">
             @foreach ($pakets as $paket)
                 <div data-aos="fade-up" data-aos-duration="1500"
-                    class="bg-white text-black rounded-lg overflow-hidden shadow-md w-[250px] flex flex-col hover:shadow-xl hover:-translate-y-1">
+                    class="bg-white text-black rounded-lg overflow-hidden shadow-md w-[250px] flex flex-col transform transition duration-300 hover:scale-105 hover:shadow-xl">
                     {{-- Gambar Paket --}}
                     <div class="h-[200px] w-full overflow-hidden">
                         <img src="{{ $paket->gambar_url }}" alt="{{ $paket->nama_paket }}"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                     </div>
 
                     {{-- Konten --}}
@@ -56,7 +57,7 @@
                             <p class="text-sm mb-4">Mulai Dari Rp {{ number_format($paket->harga, 2) }}</p>
                         </div>
                         <a href="{{ route('paket-detail', ['id' => $paket->paket_id]) }}"
-                            class="inline-block bg-green-300 text-black px-4 py-2 rounded hover:bg-green-400 mt-auto text-center">
+                            class="inline-block bg-green-300 text-black px-4 py-2 rounded hover:bg-green-400 mt-auto text-center transition duration-300">
                             Selengkapnya
                         </a>
                     </div>
@@ -79,42 +80,48 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon1.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Berizin Resmi</h3>
                 <p class="text-gray-600 text-sm">KBIH AS-SYAMIAH adalah biro perjalanan haji dan umroh berijin resmi
                     Izin Umroh No. U. 257 Tahun 2020.</p>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon2.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Berpengalaman</h3>
                 <p class="text-gray-600 text-sm">Kami telah berpengalaman memberangkatkan ribuan jamaah dengan pelayanan
                     yang terbaik.</p>
             </div>
 
-            <div  data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon3.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Perlengkapan Berkualitas</h3>
                 <p class="text-gray-600 text-sm">Kami menyediakan perlengkapan dengan kualitas yang terbaik memudahkan
                     Anda dalam perjalanan dan ibadah.</p>
             </div>
 
-            <div  data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon4.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Pendaftaran Mudah</h3>
                 <p class="text-gray-600 text-sm">Cukup daftar online dan tunggu konfirmasi via WhatsApp. Tanpa biaya
                     tersembunyi.</p>
             </div>
 
-            <div  data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon5.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Fasilitas Nyaman</h3>
                 <p class="text-gray-600 text-sm">Hotel bintang 4/5, transportasi full AC, dan katering halal bergizi
                     untuk menunjang ibadah Anda.</p>
             </div>
 
-            <div  data-aos="fade-up" data-aos-duration="1500" class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white border rounded-lg p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1">
                 <img src="{{ asset('images/icon/why-us-icon6.png') }}" class="w-12 mx-auto mb-4" alt="">
                 <h3 class="text-lg font-semibold mb-2">Tim Profesional</h3>
                 <p class="text-gray-600 text-sm">Seluruh tim kami berdedikasi melayani jamaah dengan sepenuh hati dan
@@ -125,7 +132,7 @@
 
     <!-- Galeri Section -->
     <section x-data="{ showModal: false, modalImage: '' }" class="py-12 px-4 bg-white">
-        <div  data-aos="fade-down" data-aos-duration="1500" class="text-center mb-10">
+        <div data-aos="fade-down" data-aos-duration="1500" class="text-center mb-10">
             <h2 class="text-3xl font-bold mb-2 text-green-900">Galeri</h2>
             <p class="text-gray-600">Dokumentasi perjalanan ibadah para jamaah bersama KBIH</p>
             <p class="text-gray-600">AS-SYAMIAH dari Tanah Air hingga Tanah Suci.</p>
@@ -133,7 +140,8 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             @foreach ($galeris as $galeri)
-                <div data-aos="fade-up" data-aos-duration="1500" class="overflow-hidden rounded-lg shadow-sm cursor-pointer">
+                <div data-aos="fade-up" data-aos-duration="1500"
+                    class="overflow-hidden rounded-lg shadow-sm cursor-pointer">
                     <img src="{{ $galeri->url_gambar }}" alt="Galeri"
                         class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                         @click="
@@ -144,7 +152,7 @@
             @endforeach
         </div>
 
-        <div  data-aos="zoom-in-up" data-aos-duration="1500" class="text-center mt-8">
+        <div data-aos="zoom-in-up" data-aos-duration="1500" class="text-center mt-8">
             <a href="/galeri" class="text-green-800 font-semibold hover:underline">Galeri Lainnya</a>
         </div>
 
